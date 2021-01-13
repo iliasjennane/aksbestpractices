@@ -5,4 +5,7 @@ metadata:
 spec:
   containers:
   - name: default-mem-demo-ctr
-    image: iliasjdemoscr.azurecr.io/demoapp:latest
+    image: iliasjeyscr.azurecr.io/eydemoapp:latest
+    resources:
+        limits:
+          memory: "1Gi"

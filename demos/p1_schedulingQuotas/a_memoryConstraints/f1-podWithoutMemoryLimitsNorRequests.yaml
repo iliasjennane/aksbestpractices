@@ -5,7 +5,4 @@ metadata:
 spec:
   containers:
   - name: default-mem-demo-ctr
-    image: iliasjdemoscr.azurecr.io/demoapp:latest
-    resources:
-        requests:
-          memory: "128Mi"
+    image: iliasjeyscr.azurecr.io/eydemoapp:latest

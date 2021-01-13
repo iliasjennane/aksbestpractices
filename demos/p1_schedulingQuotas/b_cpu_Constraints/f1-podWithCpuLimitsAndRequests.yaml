@@ -5,7 +5,7 @@ metadata:
 spec:
   containers:
   - name: constraints-cpu-demo-container
-    image: iliasjdemoscr.azurecr.io/demoapp:latest
+    image: iliasjeyscr.azurecr.io/eydemoapp:latest
     resources:
       limits:
         cpu: "800m"

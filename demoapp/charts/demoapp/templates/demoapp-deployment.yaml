@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: demoapp
+  name: eydemoapp
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: demoapp
+      app: eydemoapp
   template:
     metadata:
       labels:
-        app: demoapp
+        app: eydemoapp
     spec:
       containers:
-      - name: demoapp
-        image: iliasjdemoscr.azurecr.io/demoapp:latest
+      - name: eydemoapp
+        image: iliasjeyscr.azurecr.io/eydemoapp:latest
         ports:
         - containerPort: 80
 
