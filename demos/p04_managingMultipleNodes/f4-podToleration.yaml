@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: with-node-toleration
+spec:
+  tolerations:
+    - key: "power"
+      operator: "Equal"
+      value: "weak"
+      effect: "NoSchedule"
+    - key: "power"
+      operator: "Equal"
+      value: "medium"
+      effect: "PreferNoSchedule"  
+    - key: "power"
+      operator: "Equal"
+      value: "strong"
+      effect: "NoExecute"  
+  containers:
+  - name: with-node-toleration
+    image: k8s.gcr.io/pause:2.0
