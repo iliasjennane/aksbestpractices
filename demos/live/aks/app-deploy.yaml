@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: observableapp
+spec:
+  selector:
+    matchLabels:
+      app: observableapp
+  template:
+    metadata:
+      labels:
+        app: observableapp
+      annotations:
+        dapr.io/enabled: "true"
+        dapr.io/id: "observableapp"
+        dapr.io/app-port: "80"
+        dapr.io/config: "appconfig"
+    spec:
+      containers:
+      - name: observableapp
+        image: iliasjeyscr.azurecr.io/observableapp:latest
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
